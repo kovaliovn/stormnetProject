@@ -19,13 +19,22 @@ public class Cycle8 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите start число: ");
         int start = scanner.nextInt();
+        System.out.print("Введите end число: ");
         int end = scanner.nextInt();
+        System.out.print("Введите multiple число: ");
         int multiple = scanner.nextInt();
 
         int sum = 0;
-        //напишите тут ваш код
-
-        System.out.println(sum);
+        for (int i = start; i < end; i++) {
+            if (i % multiple != 0) {
+                continue;
+            }
+            sum += i;
+        }
+        System.out.println(
+                "Сумма чисел от " + start + " (включительно) до " + end + " (не включительно), кратных " + multiple
+                        + " равна: " + sum);
     }
 }

@@ -1,5 +1,8 @@
 package org.example.homework.extrahw.for_while_do_while;
 
+import java.util.Locale;
+import java.util.Scanner;
+
 /**
  * Вводим данные с клавиатуры и сразу их выводим на экран, пока не будет введено слово "enough".
  * Слово "enough" выводить не нужно.
@@ -15,8 +18,18 @@ package org.example.homework.extrahw.for_while_do_while;
 
 public class Cycle5 {
 
-    public static void main(String[] args) {
-        //напишите тут ваш код
+    private static final String ENOUGH_STRING = "ENOUGH";
 
+    public static void main(String[] args) {
+        while (true) {
+            String result = "";
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Введите данные: ");
+            result = scanner.nextLine();
+            System.out.println(result);
+            if (result.equals(ENOUGH_STRING)) {
+                break;
+            }
+        }
     }
 }

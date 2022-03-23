@@ -1,5 +1,7 @@
 package org.example.homework.extrahw.for_while_do_while;
 
+import java.util.Scanner;
+
 /**
  * В этой задаче нужно:
  * <p>
@@ -24,7 +26,15 @@ package org.example.homework.extrahw.for_while_do_while;
 public class Cycle10 {
 
     public static void main(String[] args) {
-        //напишите тут ваш код
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите строку: ");
+        String str = scanner.nextLine();
+        System.out.print("Введите число: ");
+        int number = scanner.nextInt();
 
+        do {
+            System.out.println(str);
+            number--;
+        } while (number > 0 && number < 5);
     }
 }

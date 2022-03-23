@@ -20,7 +20,17 @@ package org.example.homework.extrahw.for_while_do_while;
 public class Cycle4 {
 
     public static void main(String[] args) {
-        //напишите тут ваш код
-
+        int x = 0;
+        int y = 0;
+        String s = "Q";
+        while (x < 5) {
+            while (y < 10) {
+                System.out.print(s);
+                y++;
+            }
+            System.out.println();
+            y = 0;
+            x++;
+        }
     }
 }

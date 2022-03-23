@@ -26,7 +26,11 @@ package org.example.homework.extrahw.for_while_do_while;
 public class Cycle9 {
 
     public static void main(String[] args) {
-        //напишите тут ваш код
-
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print("8");
+            }
+            System.out.println();
+        }
     }
 }

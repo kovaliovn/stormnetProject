@@ -1,5 +1,7 @@
 package org.example.homework.extrahw.for_while_do_while;
 
+import java.util.Scanner;
+
 /**
  * Напишем программу, в которой нужно вводить с клавиатуры целые числа и считать их сумму, пока пользователь не введет
  * слово "ENTER".
@@ -14,7 +16,22 @@ package org.example.homework.extrahw.for_while_do_while;
 public class Cycle2 {
 
     public static void main(String[] args) {
-        //напишите тут ваш код
+        Scanner scanner = new Scanner(System.in);
 
+        int sum = 0;
+        boolean isExit = false;
+        System.out.print("Вводите целые числа. Введите ENTER, если хотите вывести сумму: ");
+        while (!isExit) {
+            if (scanner.hasNextInt()) {
+                int number = scanner.nextInt();
+                sum = sum + number;
+            } else if (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                if (line.equals("ENTER")) {
+                    isExit = true;
+                }
+            }
+        }
+        System.out.println(sum);
     }
 }

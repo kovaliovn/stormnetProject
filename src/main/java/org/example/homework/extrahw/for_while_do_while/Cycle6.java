@@ -13,7 +13,17 @@ package org.example.homework.extrahw.for_while_do_while;
 public class Cycle6 {
 
     public static void main(String[] args) {
-        //напишите тут ваш код
+        int a = 1;
+        int sum = 0;
 
+        while (a <= 100) {
+            if (a % 3 == 0) {
+                a++;
+                continue;
+            }
+            sum += a;
+            a++;
+        }
+        System.out.println(sum);
     }
 }
